@@ -1,0 +1,146 @@
+body {
+    background-color: #161616;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+
+.container {
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 15px;
+}
+.titulo {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+span.colorido {
+    color: #26db44;
+    font-weight: 900;
+}
+.stories {
+    display: flex;
+    flex: row;
+    margin: 15px;
+    justify-content: center;
+}
+
+.storie {
+    border: 3px solid #26db44;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.storie h3 {
+    margin: -30px;
+    margin-top: calc(100% + 25px);
+    font-size: 12px;
+}
+
+input[type=submit] {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #161616;
+    color: #FFF;
+    border: solid #26db44;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #26db44;
+    border: none;
+    color: #161616;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\2192';
+    position:absolute;
+    font-size: 28px;
+    opacity: 0;
+    top: -9px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 40px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+/*FORM DRUM KIT*/
+input[type=email] {
+    border: 2px solid #26db44;
+    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
+    height: 45px;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+/*MPC*/
+.keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+.key {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #eee;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.key.active {
+    border: 2px solid #26db44;
+    color: #26db44;
+    font-size: 22px;
+}
+
+ul li {
+  margin: 10px;
+  padding: 10px;
+}
