@@ -59,12 +59,6 @@ function togglePlayPause() {
     }
 }
 
-// function rangeChanged(value) {
-//     let player = document.getElementById('player')
-//     player.currentTime = value / player.duration
-//     console.log(value);
-// }
-
 document
     .getElementById('myRange')
     .addEventListener('change', (event) => {
