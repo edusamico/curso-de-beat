@@ -1,32 +1,32 @@
 /**STORIE KIT**/
 function viewstorie1() {
-    let storie = document.querySelector('#slideDAW').classList;    
+    let storie = document.querySelector('#slideDAW').classList;
     if (storie.contains('displayBlock')) {
         storie.remove('displayBlock');
         storie.add('displayNone');
     } else {
         storie.remove('displayNone');
-        storie.add('displayBlock');   
+        storie.add('displayBlock');
     }
 }
 
 
 
 /**DRUM KIT**/
-document.body.addEventListener('keyup', (event)=> {
-    playSound(event.code.toLowerCase() );
+document.body.addEventListener('keyup', (event) => {
+    playSound(event.code.toLowerCase());
 });
 
 function playSound(sound) {
     let audioElement = document.querySelector(`#s_${sound}`);
     let keyElement = document.querySelector(`div[data-key="${sound}"]`);
-    
-    if(audioElement) {
+
+    if (audioElement) {
         audioElement.currentTime = 0;
-        audioElement.play();        
+        audioElement.play();
     }
 
-    if(keyElement) {
+    if (keyElement) {
         keyElement.classList.add('active');
         setTimeout(() => {
             keyElement.classList.remove('active');
@@ -34,8 +34,8 @@ function playSound(sound) {
     }
 }
 
-function clicou (id) {
-        playSound(id);
+function clicou(id) {
+    playSound(id);
 }
 
 
@@ -59,3 +59,23 @@ function togglePlayPause() {
     }
 }
 
+// function rangeChanged(value) {
+//     let player = document.getElementById('player')
+//     player.currentTime = value / player.duration
+//     console.log(value);
+// }
+
+document
+    .getElementById('myRange')
+    .addEventListener('change', (event) => {
+        let player = document.getElementById('player')
+        let value = event.target.value;
+        player.currentTime = (value / 100) * player.duration
+    });
+
+document
+    .getElementById('player')
+    .addEventListener('timeupdate', (event) => {
+        let range = document.getElementById('myRange')
+        range.value = (event.target.currentTime / player.duration) * 100;
+    });
