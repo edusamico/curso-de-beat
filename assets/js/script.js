@@ -1,13 +1,17 @@
 /**STORIE KIT**/
 function viewstorie1() {
-        if (document.querySelector('#slideDAW').classList.contains('displayBlock')) {
-        document.querySelector('#slideDAW').classList.remove('displayBlock');
-        document.querySelector('#slideDAW').classList.add('displayNone');
+    let storie = document.querySelector('#slideDAW').classList;    
+    if (storie.contains('displayBlock')) {
+        storie.remove('displayBlock');
+        storie.add('displayNone');
     } else {
-        document.querySelector('#slideDAW').classList.remove('displayNone');
-        document.querySelector('#slideDAW').classList.add('displayBlock');   
+        storie.remove('displayNone');
+        storie.add('displayBlock');   
     }
 }
+
+
+
 /**DRUM KIT**/
 document.body.addEventListener('keyup', (event)=> {
     playSound(event.code.toLowerCase() );
@@ -33,3 +37,25 @@ function playSound(sound) {
 function clicou (id) {
         playSound(id);
 }
+
+
+/**PLAY WHATSAPP**/
+var playing = false;
+function playWhatsapp() {
+    playing = true;
+    document.getElementById('player').play();
+}
+
+function pauseWhatsapp() {
+    playing = false;
+    document.getElementById('player').pause();
+}
+
+function togglePlayPause() {
+    if (playing) {
+        pauseWhatsapp();
+    } else {
+        playWhatsapp();
+    }
+}
+

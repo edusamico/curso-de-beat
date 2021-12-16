@@ -1,9 +1,12 @@
+:root {
+  --primary-color: #26db44;
+  --primary-bg: #161616;
+}
 body {
-  background-color: #161616;
+  background-color: var(--primary-bg);
   color: white;
   font-family:Verdana, Geneva, Tahoma, sans-serif;    
 }
-
 .container {
   margin: 10px; 
   display: flex;
@@ -20,7 +23,7 @@ body {
 }
 
 span.colorido {
-  color: #26db44;
+  color: var(--primary-color);
   font-weight: 900;
 }
 .stories {
@@ -31,7 +34,7 @@ span.colorido {
 }
 
 .storie {
-  border: 3px solid #26db44;
+  border: 3px solid var(--primary-colo);
   background-color: #fff;
   width: 50px;
   height: 50px;
@@ -50,9 +53,9 @@ span.colorido {
 input[type=submit] {
   display: inline-block;
   border-radius: 4px;
-  background-color: #161616;
+  background-color: var(--primary-bg);
   color: #FFF;
-  border: solid #26db44;
+  border: solid var(--primary-color);
   text-align: center;
   font-size: 16px;
   padding: 20px;
@@ -65,9 +68,9 @@ input[type=submit] {
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #26db44;
+  background-color: var(--primary-color);
   border: none;
-  color: #161616;
+  color: var(--primary-bg);
   text-align: center;
   font-size: 16px;
   padding: 20px;
@@ -105,7 +108,7 @@ input[type=submit] {
 }
 /*FORM DRUM KIT*/
 input[type=email] {
-  border: 2px solid #26db44;
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
   transition: width 0.4s ease-in-out;
   height: 45px;
@@ -126,6 +129,8 @@ input[type=email] {
 
 .slideitems {
   margin: 15px;
+  max-width: 50px;
+  margin-left: -200px;
 }
 
 /*MPC*/
@@ -147,8 +152,8 @@ input[type=email] {
   font-weight: bold;
 }
 .key.active {
-  border: 2px solid #26db44;
-  color: #26db44;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   font-size: 22px;
 }
 
@@ -159,12 +164,56 @@ padding: 10px;
 
 .box {
 align-content: center;
-border: 2px solid #26db44;
-color: #26db44;
+border: 2px solid var(--primary-color);
+color: var(--primary-color);
 font-size: 14px;
 text-align: center;
 font-weight: bold;
 padding-top: 20px;
 padding-bottom: 20px;
 margin-bottom: 20px;
+}
+
+/**PLAY WHATSAPP**/
+.st0 {
+  display: flex;
+  background-color: #3F3F3F;
+  width: 324px;
+  height: 62px;
+  align-items: center;
+  border-radius: 0 10px 10px 10px;
+}
+.st1, .st3 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  
+}
+.st1 img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.st3 img {
+  height: 45px;
+  cursor: pointer;
+}
+
+.slider { 
+  appearance: none;
+  width: 190px;
+  margin-left: 15px;  
+  height: 8px;
+  border-radius: 5px; 
+  background: #2c2c2c;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
 }
