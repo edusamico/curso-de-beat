@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #26db44;
-  --primary-bg: #161616;
+  --primary-color: #752DD2;
+  --primary-bg: #08030F;
 }
 body {
   background-color: var(--primary-bg);
@@ -193,6 +193,7 @@ margin-bottom: 20px;
 .st1 img {
   height: 30px;
   cursor: pointer;
+  display:block;
 }
 
 .st3 img {
