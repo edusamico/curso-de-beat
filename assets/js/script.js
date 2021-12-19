@@ -86,4 +86,4 @@ function changeBtnPlayPause () {
             } else {
                 document.querySelector('#st1img').setAttribute('src', 'assets/images/SVG/img1wpp.svg');
             }
-        }
+        };
