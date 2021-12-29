@@ -22,7 +22,7 @@ body {
   margin-bottom: 10px;
 }
 
-span.colorido {
+.colorido {
   color: var(--primary-color);
   font-weight: 900;
 }
@@ -117,28 +117,6 @@ input[type=email] {
   margin: 8px 0;
   box-sizing: border-box;
 }
-
-/* STORIE */
-.displayNone{ 
-  display: none;
-}
-
-.displayBlock {
-  display: block;
-}
-
-.slideitems {
-  position:absolute;
-  left: 50%; 
-  top: 50%;
-  margin: 15px;
-  height: 600px;
-  width: 300px;
-  margin-top: -300px;
-  margin-left: -150px;
-  z-index: 1000;
-}
-
 /*MPC*/
 .keys {
   display: grid;

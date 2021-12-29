@@ -1,17 +1,3 @@
-/**STORIE KIT**/
-function viewstorie1() {
-    let storie = document.querySelector('#slideDAW').classList;    
-    if (storie.contains('displayBlock')) {
-        storie.remove('displayBlock');
-        storie.add('displayNone');
-    } else {
-        storie.remove('displayNone');
-        storie.add('displayBlock');   
-    }
-}
-
-
-
 /**DRUM KIT**/
 document.body
 .addEventListener('keyup', (event)=> {
